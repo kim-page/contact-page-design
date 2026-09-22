@@ -4,46 +4,69 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>contact.page — design previews</title>
+<title>contact.page — design competition</title>
 <style>
-:root{--ink:#1a1a1a;--muted:#666;--line:#e5e5e5;--accent:#0b6e4f;--bg:#fafafa}
+:root{--ink:#1a1a1a;--muted:#666;--line:#e5e5e5;--accent:#0b6e4f;--bg:#fafafa;--gold:#8a5a00;--goldbg:#fff4e0}
 *{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);margin:0;background:var(--bg)}
-.wrap{max-width:960px;margin:0 auto;padding:32px 20px 64px}
-header h1{margin:0 0 8px;font-size:28px}header p{color:var(--muted);margin:0 0 24px;max-width:640px}
-.convention{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:32px}
-.convention h2{font-size:16px;margin:0 0 8px}.convention ol{margin:0;padding-left:20px;color:#333}
-.convention li{margin:4px 0}section h2{font-size:20px;margin:28px 0 12px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.wrap{max-width:980px;margin:0 auto;padding:32px 20px 64px}
+header h1{margin:0 0 8px;font-size:30px}header p{color:var(--muted);margin:0 0 6px;max-width:680px}
+.joinbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 8px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:14px;padding:10px 20px;border-radius:999px;background:var(--accent);color:#fff}
+.btn.ghost{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+section h2{font-size:22px;margin:34px 0 4px}
+section .desc{color:var(--muted);margin:0 0 14px;max-width:680px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
 .card{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;text-decoration:none;color:inherit}
-a.card:hover{border-color:var(--accent)}.card h3{margin:0 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:14px}
-.soon{opacity:.65}.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:2px 10px;margin-bottom:8px}
-.live{background:#e6f6ef;color:var(--accent)}.wip{background:#fff4e0;color:#8a5a00}
+a.card:hover{border-color:var(--accent)}
+.card h3{margin:0 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:14px}
+.soon{opacity:.65}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:2px 10px;margin-bottom:8px}
+.live{background:#e6f6ef;color:var(--accent)}
+.house{background:#e8effc;color:#1d4ed8}
+.wip{background:var(--goldbg);color:var(--gold)}
+.entry{background:#f3f0ff;color:#5b21b6}
 footer{margin-top:48px;color:var(--muted);font-size:13px}
+.rule{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:18px 0;color:#333;font-size:14px}
 </style>
 </head>
 <body><div class="wrap">
 <header>
-<h1>contact.page — design previews</h1>
-<p>Every mockup, mini-vertical page and page draft in one place. Everything here is a real
-clickable page — no dead screenshots, no scattered files. Not indexed by Google; link-only.</p>
-</header>
-<div class="convention">
-<h2>How publishing works</h2>
-<ol>
-<li>A seat (or Kiri) produces a <strong>self-contained HTML</strong> preview.</li>
-<li>Kiri commits it under its section folder — with the noindex meta tag.</li>
-<li>It appears below. <strong>A preview isn't done until it's on this index.</strong></li>
-</ol>
+<h1>contact.page — design competition</h1>
+<p>Three tracks. One brief each. Every entry is a real clickable page — no screenshots, no mockups that don't run.</p>
+<p>House reference entries set the bar; challengers try to beat them. Kim judges.</p>
+<div class="joinbar">
+<a class="btn" href="how-to-join/">How to join</a>
+<a class="btn ghost" href="prompts/mini-vertical/">Get the vertical prompt</a>
 </div>
-<section><h2>Mini-verticals</h2><div class="cards">
-<div class="card soon"><span class="tag wip">In production</span><h3>Office rental spaces — Phnom Penh</h3><p>12 listings · Yellow Tower #1 · Round 013</p></div>
+</header>
+
+<div class="rule"><strong>The rule:</strong> a preview isn't done until it's on this index. Chat artifacts are fine for instant looks; this repo is the durable, clickable home. Nothing here is indexed by Google — link-only, on purpose.</div>
+
+<section>
+<h2>Track 1 — Mini-vertical pages</h2>
+<p class="desc">12-listing SEO pages: editorial picks, one real "why it stands out" per listing, no phone numbers on cards, every CTA to the contact-details page.</p>
+<div class="cards">
+<a class="card" href="mini-verticals/office-rental-phnom-penh/"><span class="tag house">House entry · live</span><h3>Office rental spaces — Phnom Penh</h3><p>12 listings · Yellow Tower #1 · the bar to beat</p></a>
+<div class="card soon"><span class="tag wip">In production</span><h3>Real estate agents — Phnom Penh</h3><p>12 listings · research running</p></div>
 <div class="card soon"><span class="tag wip">Draft</span><h3>Commercial plumbers — Thailand</h3><p>12 listings · Round 012 brief</p></div>
-</div></section>
-<section><h2>Listing pages</h2><div class="cards">
-<a class="card" href="listing-page/sitemap/"><span class="tag live">Live</span><h3>Listing page sitemap mockup</h3><p>Full clickable sitemap — contact detail page → business activity page.</p></a>
-</div></section>
-<section><h2>Brand</h2><div class="cards">
-<div class="card soon"><span class="tag wip">Coming soon</span><h3>Logo &amp; identity</h3><p>Egg → head, yolk → headset mic.</p></div>
-</div></section>
-<footer><p>contact.page design previews · GitHub Pages · kept out of search engines on purpose.</p></footer>
+</div>
+</section>
+
+<section>
+<h2>Track 2 — Listing detail page</h2>
+<p class="desc">The full listing page: contact detail page → business activity page, contact gating, no raw numbers on the surface.</p>
+<div class="cards">
+<a class="card" href="listing-page/sitemap/"><span class="tag live">Live</span><h3>Listing page sitemap mockup</h3><p>Full clickable sitemap — contact detail page → business activity page</p></a>
+</div>
+</section>
+
+<section>
+<h2>Track 3 — Contact detail web application</h2>
+<p class="desc">The gate itself: security check → real contact details. The most industrial track — built for agents as much as humans.</p>
+<div class="cards">
+<div class="card soon"><span class="tag wip">No entries yet</span><h3>Contact detail web app</h3><p>Brief coming — this track is open</p></div>
+</div>
+</section>
+
+<footer><p>contact.page design competition · entries published by Kiri · kept out of search engines on purpose</p></footer>
 </div></body></html>
