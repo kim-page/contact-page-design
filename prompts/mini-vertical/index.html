@@ -45,18 +45,30 @@ HARD RULES (non-negotiable)
    DATA). The details page sits behind a gate and reveals the real contact info.
 2. @newcustomers appears ONLY in the house ad. Never as per-listing contact —
    funneling everything into one handle reads as spam.
-3. Trust mark: exactly ONE line directly under the Top-12 heading — a green
-   checkmark character (U+2611, plain text, never emoji) followed by the words
-   &quot;All 12 verified by contact.page&quot;. No per-card badges. A badge on everything
-   is a badge on nothing.
+3. Trust mark: exactly ONE line directly before the list — a green checkmark
+   character (U+2611, plain text, never emoji) followed by the words
+   &quot;All 12 verified by contact.page — last verified {Month YYYY}&quot;. All 12
+   listings are verified in a single pass; the date is that pass. No per-card
+   badges, no legend. A badge on everything is a badge on nothing.
 4. &quot;Load more&quot; at the bottom links to the portal&#x27;s real category page (given in
    DATA) — the same-page portal category browser, not a dead end.
 5. Vendor-neutral output. Never mention tool vendors anywhere in the page.
 6. Language: English primary (Cambodia market).
+7. White-label header: no brand wordmark, logo, or site-name suffix anywhere in
+   the header or the title tag. The page is about the industry, not the brand —
+   the URL already says contact.page. The trust line (rule 3) and the house ad
+   are the only brand mentions on the page.
 
 PAGE ANATOMY
-- SEO-first: title tag, meta description, one H1, H2 sections, JSON-LD
-  (ItemList of LocalBusiness, names/addresses/URLs from DATA).
+- SEO expert mode: keyword-first title tag with the year, e.g. &quot;{Vertical} in
+  {City} ({YYYY}): 12 Worth Considering, and Why They Stand Out&quot; — no brand
+  suffix. One meta description (vertical + city + the verification promise).
+  Open Graph tags. One H1, H2 sections, question-style H3s inside the industry
+  notes (long-tail queries). Semantic HTML (&lt;main&gt;, &lt;section&gt;, &lt;article&gt; per
+  listing). JSON-LD: ItemList of LocalBusiness (names/addresses/URLs from
+  DATA) + FAQPage built from the industry notes + BreadcrumbList. Descriptive
+  anchor text everywhere (&quot;Load more office rental spaces&quot;, never &quot;click
+  here&quot;).
 - Intro: 2-3 sentences framing the pick — who it&#x27;s for, what &quot;stands out&quot;
   means here.
 - The 12 cards in DATA order. Listing #1 is Yellow Tower Phnom Penh — its angle
@@ -67,6 +79,15 @@ PAGE ANATOMY
 - House ad card (WhatsApp link to @newcustomers): &quot;Your AI worker for the
   future. Bringing in new customers and updating your contact page for AI and
   Google to read.&quot;
+- METADATA — industry notes + free JSON: an &quot;Industry notes&quot; section before
+  the related-categories block: 3-5 short Q&amp;A entries answering what a buyer
+  asks BEFORE choosing (prices, formats, areas, how the trade works locally).
+  Every claim grounded in DATA or the verified listings — never invent, never
+  generalize beyond what the data supports; phrase observed ranges as &quot;across
+  the 12 listed&quot;. Also publish industry.json next to the page: machine-
+  readable, the same facts (listings, notes, mapping, last_verified), linked
+  from the category-mapping block. This file is the point — it compounds into
+  the per-industry dataset over time.
 - Related categories block: links to the related-category URLs in DATA.
 - Footer: formal category mapping block — cpac ID, Google category ID,
   schema.org type, ISIC, NAICS, Wikidata QID. Copy codes from DATA; never
@@ -74,7 +95,8 @@ PAGE ANATOMY
   (AI + Google) more than humans.
 
 OUTPUT
-One single self-contained HTML file, no external dependencies. Include
+Two files: one single self-contained HTML file, no external dependencies,
+plus the industry.json described above. Include
 &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;&gt; in the head
 (design previews stay out of Google).
 
@@ -84,7 +106,8 @@ https://kim-page.github.io/contact-page-design/
 Read the &quot;How to join&quot; page there. A house reference entry already exists for
 this vertical — beat it. Submit by sending the single HTML file back; it will
 be published as your entry next to the others. Judged on: zero invented facts,
-the contact-flow rules above, SEO structure, and how sharp the
+the contact-flow rules above, SEO structure, depth and accuracy of the
+industry data, and how sharp the
 &quot;why it stands out&quot; picks are.
 
 DATA
