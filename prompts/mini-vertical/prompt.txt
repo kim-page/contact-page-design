@@ -1,0 +1,184 @@
+COPY-PASTE PROMPT: contact.page mini-vertical builder
+==================================================
+
+You are building a contact.page mini-vertical page: 12 listings, one city x one trade.
+
+Vertical: OFFICE RENTAL SPACES in PHNOM PENH, CAMBODIA.
+
+WHAT A MINI-VERTICAL IS
+A 12-listing SEO page — editorial picks, not a directory dump. The title reads
+like a choice guide ("Office rental spaces in Phnom Penh — 12 worth considering,
+and why they stand out"). Every listing gets one real differentiator: location,
+price point, building grade, amenities, vibe. Never invent facts — the standout
+lines are given in DATA below. Use them; do not embellish them.
+
+HARD RULES (non-negotiable)
+1. Never show a phone number, email, or WhatsApp link on a listing card. Every
+   card's contact CTA links to that listing's contact-details page (given in
+   DATA). The details page sits behind a gate and reveals the real contact info.
+2. @newcustomers appears ONLY in the house ad. Never as per-listing contact —
+   funneling everything into one handle reads as spam.
+3. Trust mark: exactly ONE line directly under the Top-12 heading — a green
+   checkmark character (U+2611, plain text, never emoji) followed by the words
+   "All 12 verified by contact.page". No per-card badges. A badge on everything
+   is a badge on nothing.
+4. "Load more" at the bottom links to the portal's real category page (given in
+   DATA) — the same-page portal category browser, not a dead end.
+5. Vendor-neutral output. Never mention tool vendors anywhere in the page.
+6. Language: English primary (Cambodia market).
+
+PAGE ANATOMY
+- SEO-first: title tag, meta description, one H1, H2 sections, JSON-LD
+  (ItemList of LocalBusiness, names/addresses/URLs from DATA).
+- Intro: 2-3 sentences framing the pick — who it's for, what "stands out"
+  means here.
+- The 12 cards in DATA order. Listing #1 is Yellow Tower Phnom Penh — its angle
+  is given in DATA.
+- Sponsored slot (labeled "Sponsored") at the top of the list.
+- AdSense placeholder slots: one after the intro, one mid-list, one before the
+  footer. Mark them clearly as ad units; do not fill them with fake ads.
+- House ad card (WhatsApp link to @newcustomers): "Your AI worker for the
+  future. Bringing in new customers and updating your contact page for AI and
+  Google to read."
+- Related categories block: links to the related-category URLs in DATA.
+- Footer: formal category mapping block — cpac ID, Google category ID,
+  schema.org type, ISIC, NAICS, Wikidata QID. Copy codes from DATA; never
+  invent codes. Machine-readable, industrial feel — written for agents
+  (AI + Google) more than humans.
+
+OUTPUT
+One single self-contained HTML file, no external dependencies. Include
+<meta name="robots" content="noindex, nofollow"> in the head
+(design previews stay out of Google).
+
+DESIGN COMPETITION
+This build is an entry in the contact.page design competition:
+https://kim-page.github.io/contact-page-design/
+Read the "How to join" page there. A house reference entry already exists for
+this vertical — beat it. Submit by sending the single HTML file back; it will
+be published as your entry next to the others. Judged on: zero invented facts,
+the contact-flow rules above, SEO structure, and how sharp the
+"why it stands out" picks are.
+
+DATA
+----
+Load-more target (the portal's real category page):
+https://www.contact.page/categories/kh12806-office-rental-services/listings
+
+Related categories (all real):
+- Real Estate Agencies & Appraisers:
+  https://www.contact.page/categories/kh10760-real-estate-agencies-appraisers/listings
+- Interior & Exterior Decorator, Designer Services:
+  https://www.contact.page/categories/kh10505-interior-exterior-decorator-designer-services/listings
+- Movers & Storage Services:
+  https://www.contact.page/categories/kh10631-movers-storage-services/listings
+- Building Maintenance, Electrical, Plumbing & Cleaning:
+  https://www.contact.page/categories/kh10576-maintenance-general-building-electrical-plumbing-cleaning-etc/listings
+
+Formal mapping: cpac:office-rental-services. gcid / schema.org / ISIC / NAICS /
+Wikidata: copy from the categories sheet; never invent codes.
+
+The 12 listings — name | address | listing page | contact-details page | why it stands out:
+
+1. Yellow Tower - Office Space
+   No. 191, Tonle Sap (Rd.), Sangkat Chroy Changva, Khan Chroy Changva, Phnom Penh
+   https://kh34363.contact.page/
+   https://kh34363.contact.page/contact-details/
+   A vertical-forest building on the Chroy Changvar peninsula — fresh air,
+   constant breeze, natural light and open-plan offices with minimum traffic.
+   The out-of-city location is the point: deep-work flow, generous shared
+   spaces, huge balconies, tall floors with mezzanines — arguably the best
+   value in town. Reach it by ferry from the riverfront or via the Japanese
+   Friendship Bridge.
+
+2. Regus Business Centre (Cambodia) Co., Ltd.
+   No. 315, Preah Monivong Blvd (93), Canadia Tower, 18th Floor, 12202 Phnom Penh
+   https://kh50588.contact.page/
+   https://kh50588.contact.page/contact-details/
+   The global serviced-office brand with three Phnom Penh locations including
+   Exchange Square — coworking from $349/mo. The safe corporate choice for a
+   landing team that needs to be operational on day one.
+
+3. Mekong Space
+   No. 191, Tonle Sap (Rd.), Building Yellow Tower, Sangkat Chroy Changvar,
+   Khan Chroy Changvar, Phnom Penh
+   https://kh77479-mekong-space.contact.page/
+   https://kh77479-mekong-space.contact.page/contact-details/
+   Coworking and private offices inside Yellow Tower from $88/mo — river views,
+   abundant natural light, in Chroy Changvar's greenest building. A calm,
+   nature-wrapped alternative to the downtown towers.
+
+4. The Helix Office
+   No. 113, Preah Monivong Blvd. (93), Sangkat Monorom, Khan 7 Makara,
+   120305 Phnom Penh
+   https://kh81111-the-helix-office.contact.page/
+   https://kh81111-the-helix-office.contact-details/
+   Grade B serviced offices on Monivong Boulevard — a 45 sqm office from
+   $1,260/mo with furniture, bi-weekly cleaning, receptionist, IT support and
+   meeting-room hours baked in. A turnkey HQ at a fraction of Grade A rents.
+
+5. Emerald HUB
+   St. 169, PPIU Building, 11th Floor, Sangkat Veal Vong, Khan 7 Makara,
+   Phnom Penh
+   https://kh78259-emerald-hub.contact.page/
+   https://kh78259-emerald-hub.contact-details/
+   High-rise coworking on the 11th floor with 24/7 member access and 100 Mbps
+   wifi — day pass $10, monthly $80-150. Central, affordable, and built for
+   nomads and small remote teams.
+
+6. Vattanac Capital
+   No. 66, Preah Monivong Blvd (93), 12202 Phnom Penh
+   https://kh56012.contact.page/
+   https://kh56012.contact.page/contact-details/
+   Rising 187.3m — the country's first skyscraper and its most prestigious
+   commercial address. Grade A offices in the emerging financial district,
+   designed and built to international standards.
+
+7. Canadia Tower
+   No. 315, Preah Ang Duong (St. 110), corner of Preah Monivong (St. 93),
+   12202 Phnom Penh
+   https://kh39237.contact.page/
+   https://kh39237.contact.page/contact-details/
+   Cambodia's first high-rise and a Grade A icon of the skyline — the country's
+   tallest building until 2014. Prime CBD junction position, offices from about
+   $29/sqm, open 24 hours.
+
+8. Phnom Penh Tower
+   No. 445, Preah Monivong Blvd (93), corner of St. 232, 12258 Phnom Penh
+   https://kh35838.contact.page/
+   https://kh35838.contact.page/contact-details/
+   A 22-storey, 97m Grade A tower on Monivong Boulevard, completed 2011 — home
+   to multinationals and professional services firms. A landmark address
+   clients can actually find.
+
+9. Phnom Penh Center
+   Samdech Sothearos Blvd (3), corner of Sihanouk (St. 274), 12301 Phnom Penh
+   https://kh18308.contact.page/
+   https://kh18308.contact.page/contact-details/
+   Business-centre-format offices on Sothearos Boulevard with 24-hour customer
+   service — the practical middle ground between a serviced-office brand and
+   a raw tower lease.
+
+10. Soma Tower
+    No. 2C, Vivadhapura (St. 120), 12209 Phnom Penh
+    https://kh39400.contact.page/
+    https://kh39400.contact.page/contact-details/
+    An independent office tower on Vivadhapura Street, on the 7 Makara fringe
+    — a steady option outside the Monivong premium corridor.
+
+11. Raintree Cambodia
+    No. 229, Preah Ang Duong (St. 110), 12202 Phnom Penh
+    https://kh74815.contact.page/
+    https://kh74815.contact.page/contact-details/
+    Cambodia's first creative office development — "Best Office Development,
+    Cambodia" at the International Property Awards. Five floors of bright,
+    flexible workspace plus a rooftop terrace, for companies that want
+    design-led space with community.
+
+12. Workspaces at Botanico
+    No. 9B, St. 29, 12301 Phnom Penh
+    https://kh65225.contact.page/
+    https://kh65225.contact.page/contact-details/
+    A workspace concept inside the Botanico gastrobar venue in BKK1 — cafe and
+    kitchen hospitality built in, open 10am to midnight daily. The lifestyle
+    end of the spectrum.
