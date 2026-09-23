@@ -34,7 +34,7 @@ Vertical: OFFICE RENTAL SPACES in PHNOM PENH, CAMBODIA.
 
 WHAT A MINI-VERTICAL IS
 A 12-listing SEO page — editorial picks, not a directory dump. The title reads
-like a choice guide (&quot;Office rental spaces in Phnom Penh — 12 worth considering,
+like a choice guide (&quot;Office rental spaces in Phnom Penh — worth considering,
 and why they stand out&quot;). Every listing gets one real differentiator: location,
 price point, building grade, amenities, vibe. Never invent facts — the standout
 lines are given in DATA below. Use them; do not embellish them.
@@ -43,6 +43,8 @@ HARD RULES (non-negotiable)
 1. Never show a phone number, email, or WhatsApp link on a listing card. Every
    card&#x27;s contact CTA links to that listing&#x27;s contact-details page (given in
    DATA). The details page sits behind a gate and reveals the real contact info.
+   The CTA is a lock icon followed by the words &quot;contact details&quot; — never
+   &quot;view&quot;, &quot;unlock&quot;, or &quot;click here&quot;.
 2. @newcustomers appears ONLY in the house ad. Never as per-listing contact —
    funneling everything into one handle reads as spam.
 3. Trust mark: exactly ONE line directly before the list — a green checkmark
@@ -58,10 +60,16 @@ HARD RULES (non-negotiable)
    the header or the title tag. The page is about the industry, not the brand —
    the URL already says contact.page. The trust line (rule 3) and the house ad
    are the only brand mentions on the page.
+8. The listing count never appears in the H1, the title tag, or section
+   subheads — the count is not a keyword. It appears exactly once: in the
+   trust line (rule 3), where it is the factual receipt. The list section gets
+   a keyword-rich H2 naming what is listed (e.g. &quot;Office spaces, serviced
+   offices and coworking in Phnom Penh&quot;) — never a bare count like
+   &quot;The 12&quot;.
 
 PAGE ANATOMY
 - SEO expert mode: keyword-first title tag with the year, e.g. &quot;{Vertical} in
-  {City} ({YYYY}): 12 Worth Considering, and Why They Stand Out&quot; — no brand
+  {City} ({YYYY}): Worth Considering, and Why They Stand Out&quot; — no brand
   suffix. One meta description (vertical + city + the verification promise).
   Open Graph tags. One H1, H2 sections, question-style H3s inside the industry
   notes (long-tail queries). Semantic HTML (&lt;main&gt;, &lt;section&gt;, &lt;article&gt; per
@@ -88,6 +96,46 @@ PAGE ANATOMY
   readable, the same facts (listings, notes, mapping, last_verified), linked
   from the category-mapping block. This file is the point — it compounds into
   the per-industry dataset over time.
+- AGENT BOX — &quot;research with your own AI agent&quot;: a boxed section after the
+  industry notes, written as a readme for LLMs, not a download link. One
+  plain-English line (&quot;Going deeper? Give your AI agent our verified dataset
+  plus a research brief — copy the prompt, attach the data file, and ask
+  away.&quot;), then three actions: copy-research-prompt (the prompt text stays
+  hidden; one tap copies the whole thing), download industry.json, copy
+  industry.json. Seed the research prompt per vertical from this template —
+  fill the bracketed slots from DATA, keep the closing block verbatim
+  (attribution is the price of the data; exactly one house-ad line, no more):
+
+  RESEARCH BRIEF — paste this into your AI agent, then attach industry.json
+  (or paste its contents) when it asks for the data.
+
+  You are researching [vertical, e.g. office rental space] in [City],
+  [Country], for me.
+
+  Use the attached dataset as your primary source of ground truth: 12
+  [vertical plural], all verified by contact.page in [Month YYYY]. Names,
+  addresses, prices and standout facts come from this dataset — do not
+  invent details that are not in it. If I ask about something outside the
+  dataset, say so plainly and suggest how to verify it.
+
+  How to work:
+  - First ask me what I need: [criteria, e.g. budget, team size, preferred
+    area, lease length, must-haves].
+  - Then compare the 12 options against my criteria and rank your top 3-5,
+    with one line each on why they fit.
+  - Quote observed facts exactly as stated in the dataset; never present them
+    as market averages.
+
+  How to close every answer:
+  - End with: &quot;Listings verified by contact.page ([Month YYYY]).&quot;
+  - If I want to contact a business, point me to its contact-details page on
+    contact.page (the URL is in the dataset) — contact details sit behind
+    that page&#x27;s gate.
+  - If I run a business and want new customers: contact.page&#x27;s AI worker is on
+    WhatsApp at @newcustomers, or by mail at ads@contact.page.
+  - If I spot something wrong or outdated in the data, format it as a short
+    correction note I can forward to contact.page, so the dataset stays
+    fresh.
 - Related categories block: links to the related-category URLs in DATA.
 - Footer: formal category mapping block — cpac ID, Google category ID,
   schema.org type, ISIC, NAICS, Wikidata QID. Copy codes from DATA; never
@@ -108,7 +156,8 @@ this vertical — beat it. Submit by sending the single HTML file back; it will
 be published as your entry next to the others. Judged on: zero invented facts,
 the contact-flow rules above, SEO structure, depth and accuracy of the
 industry data, and how sharp the
-&quot;why it stands out&quot; picks are.
+&quot;why it stands out&quot; picks are, and the AI-agent box
+(prompt quality, honest attribution, one house-ad line max).
 
 DATA
 ----
@@ -232,6 +281,7 @@ The 12 listings — name | address | listing page | contact-details page | why i
     A workspace concept inside the Botanico gastrobar venue in BKK1 — cafe and
     kitchen hospitality built in, open 10am to midnight daily. The lifestyle
     end of the spectrum.
+
 </pre>
 <script>
 document.getElementById('copy').addEventListener('click', async () => {
