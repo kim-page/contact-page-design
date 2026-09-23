@@ -1,0 +1,44 @@
+COPY-PASTE PROMPT: contact.page listing-detail builder
+======================================================
+
+You are designing a contact.page LISTING DETAIL page: the single-business page and its contact gate. This is where humans and AI agents land from search — the most important page in the system.
+
+THE BUSINESS — everyone designs the same one, so entries stay comparable:
+Yellow Tower, Phnom Penh (id kh34363 — a real contact.page listing).
+- Address: No. 191, Tonle Sap Road, Sangkat Chroy Changva, Khan Chroy Changva, Phnom Penh 12210
+- Contact: +855 12 869 111 (Miss Avy) — MASKED on the open page, revealed only past the gate
+- Email: info@yellow-tower.com
+- Offerings: 500 m² floors $5/m², private offices $5–$12/m², Level 5 from $250/mo, desks $88–$110/mo, floors 1–3 strata sale, first month rent-free direct
+- Viewings: Mon–Fri 9–17
+- Angle: vertical forest, out-of-city deep-work flow, generous shared spaces/balconies/mezzanines, best bang for buck
+Real facts only — never invent beyond what's above. Photos and counts may be illustrative placeholders; say so in the what-changed log.
+
+PAGE STRUCTURE — the 13 blocks, in order:
+1. Header — the H1 is the BUSINESS NAME, never the category. Tagline + category line below it.
+2. Ad top
+3. Contact bar — masked numbers (+855 •• ••• •••), "Show contact info" runs the gate
+4. Location — real address + directions link
+5. Media — photo placeholders
+6. About — real business copy
+7. Offerings — products/services, informational only. No shop, no cart, no checkout, ever.
+8. Facts
+9. Hours
+10. Ad bottom
+11. Footer
+Plus, on the lock screen: a "Preview — what we have" inventory (masked contact rows, the location row, community-notes counts). Social block only with verified profile URLs — thin rule: omit when absent, never fake it.
+
+THE GATE — the whole point of the page:
+- Contact details live behind a robot check ("I'm not a robot") → SHOW CONTACT INFO button sits ABOVE the preview box (reachable with no scroll).
+- Gate copy is short, two things only: we need to know you're human; locked numbers stay real (no scrapers, no spam, no robocalls).
+- No raw numbers on the open surface: no tel: links, no wa.me links, no mailto: links. Masked display only. Full digits live only in the JSON-LD structured data.
+- "For your AI" card: tiny grey AI names under the title (ChatGPT · Gemini · Grok · Claude · Muse…) so people get it instantly. "Send to my AI →" opens instructions with the ways to hand the business over: (1) copy the handoff for any AI chat — the handoff text opens by telling the AI to use only the given details and never invent contact info; (2) contact.page's own AI worker on WhatsApp, explicitly labeled as @newcustomers and NOT the business's number.
+
+FORMAT — competition rules, identical for every AI:
+- One self-contained HTML file: inline CSS/JS, no external requests, no relative links (reviewers open the file in isolation).
+- <meta name="robots" content="noindex,nofollow"> and a visible "proposal — not production" label.
+- Grey footer on every screen/view with a collapsed "what changed" changelog — internal-facing, never part of the design.
+- Versioned v1, v2, v3… — never overwrite a version.
+- Mobile-first: thumb-reachable actions, the gate button above the fold.
+- Kim first-name-only; his full name never appears in anything.
+
+JUDGED ON: zero invented facts · the gate done right (short copy, button above the fold, no raw numbers anywhere on the surface) · the For-your-AI card genuinely usable · the 13 blocks complete with nothing faked · mobile-first throughout.
