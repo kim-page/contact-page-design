@@ -39,6 +39,10 @@ HARD RULES (non-negotiable)
    a keyword-rich H2 naming what is listed (e.g. "Office spaces, serviced
    offices and coworking in Phnom Penh") — never a bare count like
    "The 12".
+- "What's on this page" anchor nav right after the intro: links to
+  #listings, #notes, #ai-agent, #related. Written for humans AND agents —
+  crawlers and LLMs use it as the page map. Every target section carries its
+  id.
 
 PAGE ANATOMY
 - SEO expert mode: keyword-first title tag with the year, e.g. "{Vertical} in
