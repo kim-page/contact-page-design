@@ -54,6 +54,10 @@ h2.listhead{font-size:22px;margin:0 0 12px}
 .abtn:hover{background:var(--accent);color:#fff}
 .abtn.done{background:var(--accent);color:#fff}
 .agentfine{color:var(--muted);font-size:13px;margin:0}
+.toc{font-size:14px;color:var(--muted);margin:2px 0 6px}
+.toc .t{font-weight:700;color:var(--ink);margin-right:6px}
+.toc a{color:var(--accent);font-weight:600;text-decoration:none}
+.toc a:hover{text-decoration:underline}
 footer.site{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 </style>
 <script type="application/ld+json">
@@ -83,9 +87,11 @@ footer.site{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);co
 <h1>Real Estate Agents in Phnom Penh — Worth Considering</h1>
 <p class="intro">Buying, selling or renting in Phnom Penh? The market runs on relationships — from global consultancies in Canadia Tower to borey specialists on National Road 2. These are twelve agencies worth a call, each with a real reason it stands out. Every listing is verified by contact.page, and contact details are one click away.</p>
 
+<nav class="toc" aria-label="On this page"><span class="t">On this page:</span> <a href="#listings">The listings</a> &middot; <a href="#notes">Industry notes</a> &middot; <a href="#ai-agent">For your AI agent</a> &middot; <a href="#related">Related categories</a></nav>
+
 <div class="adslot">AD — AdSense unit</div>
 
-<h2 class="listhead">Real estate agencies in Phnom Penh</h2>
+<h2 class="listhead" id="listings">Real estate agencies in Phnom Penh</h2>
 <p class="trust"><span class="check">☑</span> All 12 verified by contact.page — last verified September 2026</p>
 
 <div class="cards">
@@ -209,7 +215,7 @@ footer.site{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);co
 
 <div class="adslot">AD — AdSense unit</div>
 
-<section class="notes" aria-label="About real estate agents in Phnom Penh">
+<section class="notes" id="notes" aria-label="About real estate agents in Phnom Penh">
 <h2>About real estate agents in Phnom Penh</h2>
 <p class="notesrc">Market notes drawn from the 12 verified listings above — observed facts, not estimates.</p>
 <h3>Should I use an agent, or browse listings myself?</h3>
@@ -221,7 +227,7 @@ footer.site{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);co
 <h3>What does a Phnom Penh agency typically handle?</h3>
 <p>Sales and rentals at every agency; full-service firms add ownership transfers, valuations and ongoing property management (Khmer Real Estate, Cambodia Trust, Prime Real Estate — the same firm finds, values and manages the asset). Expect to talk on the apps buyers actually use: several agencies operate on Telegram, WhatsApp and WeChat.</p>
 
-<section class="agentbox" aria-label="For your AI agent">
+<section class="agentbox" id="ai-agent" aria-label="For your AI agent">
 <h2>Research this with your own AI agent</h2>
 <p class="readme">Going deeper? Give your AI agent our verified dataset plus a research brief — copy the prompt, attach the data file, and ask away. Free, same facts as this page.</p>
 <div class="agentbtns">
@@ -229,6 +235,7 @@ footer.site{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);co
 <a class="abtn" href="industry.json" download>⤓ Download industry.json</a>
 <button type="button" class="abtn" data-copy="json">⧉ Copy industry.json</button>
 </div>
+<p class="readme">AI agent reading this page yourself? It’s built for you too: <a href="industry.json">industry.json</a> carries the full dataset, and <a href="llms.txt">llms.txt</a> has your usage instructions.</p>
 <p class="agentfine">Verified by contact.page — September 2026. The prompt text stays hidden on purpose: one tap copies the whole thing.</p>
 </section>
 <script type="text/plain" id="agent-prompt">
@@ -258,7 +265,7 @@ How to close every answer:
 
 </section>
 
-<div class="related">
+<div class="related" id="related">
 <h2>Related categories</h2>
 <ul>
 <li><a href="https://www.contact.page/categories/kh12806-office-rental-services/listings">Office Rental Services</a></li>
