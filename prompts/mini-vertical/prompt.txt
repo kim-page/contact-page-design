@@ -61,9 +61,9 @@ PAGE ANATOMY
 - Sponsored slot (labeled "Sponsored") at the top of the list.
 - AdSense placeholder slots: one after the intro, one mid-list, one before the
   footer. Mark them clearly as ad units; do not fill them with fake ads.
-- House ad card (WhatsApp link to @newcustomers): "Your AI worker for the
-  future. Bringing in new customers and updating your contact page for AI and
-  Google to read."
+- House ad card (WhatsApp link https://wa.me/newcustomers): "Your AI worker
+  for the future. Bringing in new customers and updating your contact page
+  for AI and Google to read."
 - METADATA — industry notes + free JSON: an "Industry notes" section before
   the related-categories block: 3-5 short Q&A entries answering what a buyer
   asks BEFORE choosing (prices, formats, areas, how the trade works locally).
@@ -269,4 +269,5 @@ The 12 listings — name | address | listing page | contact-details page | why i
     A workspace concept inside the Botanico gastrobar venue in BKK1 — cafe and
     kitchen hospitality built in, open 10am to midnight daily. The lifestyle
     end of the spectrum.
+
 
