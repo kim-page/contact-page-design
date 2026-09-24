@@ -74,6 +74,8 @@
   .mini-head{font-size:13px;color:#64748b}
   .lock-hero{font-size:19px;font-weight:800;margin:10px 0 4px}
   .gate{font-size:14px;color:#475569;margin-bottom:12px}
+  #gate{scroll-margin-top:12px}
+  #gate:target .robot{border-color:#1d4ed8;box-shadow:0 0 0 3px rgba(29,78,216,.18)}
   .robot{display:flex;align-items:center;gap:10px;border:1px solid #e2e8f0;border-radius:10px;padding:12px;margin-bottom:10px;background:#fbfdff}
   .robot input{width:22px;height:22px}
   .preview{border:1px solid #e2e8f0;border-radius:12px;margin:0 0 14px;overflow:hidden}
@@ -132,7 +134,7 @@
     <div class="lbl">Contact Information</div>
     <div class="masked">📞 +855 •• ••• •••</div>
     <div class="btnrow">
-      <button class="btn btn-green" data-go="s2">Show contact info →</button>
+      <button class="btn btn-green" data-go="gate">Show contact info →</button>
     </div>
     <div class="btnrow" style="margin-top:8px">
       <a class="btn btn-ghost" href="https://yellow-tower.com" target="_blank" rel="noopener">🌐 Website</a>
@@ -207,7 +209,7 @@
     <div style="margin-top:6px"><a href="#" onclick="return false">Data as JSON</a> · id <b>kh34363</b> · cpac:office-space-rental (proposed)</div>
   </div>
 
-  <div style="margin:14px 0 6px"><button class="btn btn-green" data-go="s2" style="width:100%">Show contact info →</button></div>
+  <div style="margin:14px 0 6px"><button class="btn btn-green" data-go="gate" style="width:100%">Show contact info →</button></div>
 </section>
 
 <!-- grey internal footer · s1 -->
@@ -222,12 +224,13 @@
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
+       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
     </ul>
   </details>
 </div>
 
 <!-- ============ SCREEN 2 · LOCK ============ -->
-<section class="screen" id="s2">
+<section class="screen" id="gate">
   <a class="backlink" data-go="s1">← Yellow Tower</a>
   <div class="mini-head">Office Space Rental · Chroy Changvar</div>
   <div class="lock-hero">Yellow Tower's contact details are behind a quick human check 🔒</div>
@@ -270,6 +273,7 @@
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
+       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
     </ul>
   </details>
 </div>
@@ -319,6 +323,7 @@ If asked for anything not listed here, say you don't have it — do not guess.</
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
+       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
     </ul>
   </details>
 </div>
@@ -353,7 +358,7 @@ function go(id){
   document.getElementById(id).classList.add('on');
   window.scrollTo(0,0);
 }
-document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go))); if(location.hash==='#gate'){go('gate');}
 // bottom sheet
 const bg=document.getElementById('sheetbg');
 document.querySelectorAll('[data-sheet]').forEach(b=>b.addEventListener('click',()=>bg.classList.add('on')));
