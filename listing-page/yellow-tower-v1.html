@@ -27,8 +27,8 @@
   .screen{display:none;max-width:640px;margin:0 auto;background:#fff;min-height:100vh;padding:18px 16px 8px}
   .screen.on{display:block}
   /* header block — H1 is the business name, never the category */
-  h1{font-size:27px;letter-spacing:-.3px;margin:2px 0 4px}
-  .tagline{font-size:15px;color:#2e7d32;font-weight:600;margin-bottom:4px}
+  h1{font-size:34px;font-weight:800;letter-spacing:-.5px;margin:6px 0 6px}
+  .tagline{font-size:16px;color:#2e7d32;font-weight:700;margin-bottom:6px}
   .catline{font-size:13px;color:#64748b;margin-bottom:2px}
   .aka{font-size:12px;color:#94a3b8;margin-bottom:12px}
   .np{font-size:11px;color:#b91c1c;background:#fef2f2;border:1px solid #fecaca;border-radius:6px;padding:6px 9px;margin-bottom:12px}
@@ -36,9 +36,9 @@
   .adslot .tag{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#b0b8c5;margin-bottom:6px}
   .adslot .box{width:300px;max-width:100%;height:250px;margin:0 auto;background:#eef2f7;border-radius:6px;display:flex;align-items:center;justify-content:center}
   /* contact bar */
-  .contactbar{border:1px solid #e2e8f0;border-radius:12px;padding:14px;margin:12px 0;background:#fbfdff}
+  .contactbar{border:1px solid #dbe3ec;border-radius:14px;padding:16px;margin:14px 0;background:#fbfdff}
   .contactbar .lbl{font-size:12px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
-  .masked{font-size:22px;font-weight:700;letter-spacing:1px;margin:4px 0 10px}
+  .masked{font-size:28px;font-weight:800;letter-spacing:.5px;margin:6px 0 12px}
   .btnrow{display:flex;gap:8px;flex-wrap:wrap}
   .btn{display:inline-block;border:0;border-radius:9px;padding:11px 16px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none;text-align:center}
   .btn-green{background:#22c55e;color:#fff;flex:1;min-width:180px}
@@ -48,7 +48,7 @@
   .trustline .ok{color:#16a34a;font-weight:700}
   /* content blocks */
   .block{margin:16px 0;padding-top:4px}
-  .block h2{font-size:15px;text-transform:uppercase;letter-spacing:.6px;color:#475569;margin-bottom:8px}
+  .block h2{font-size:21px;font-weight:800;letter-spacing:-.2px;color:#0f172a;margin:6px 0 10px}
   .addr{font-size:15px}
   .mapph{height:150px;background:#e8eef4;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#7c8aa0;font-size:13px;margin:8px 0}
   .gal{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
@@ -247,7 +247,8 @@
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
-       <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
+       <li>Header polish (2026-09-24, Kim): playing with the current CSS against the real yellow-tower.com contact page — H1 up to 34px/800, section headers now nice and big (21px/800, no more tiny uppercase grey), masked number hero-sized at 28px like the real site's big phone header, roomier contact box. Boxes kept as they were.</li>
+      <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
       <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
       <li>For-your-AI dedup + smart send (2026-09-24, Kim): the big visible handoff blurb is gone &#8212; the brief now lives in a hidden element and never shows on the page. One "For your AI" card opens the sheet: pick-your-AI grid (ChatGPT / Claude / Perplexity open with pre-filled ?q= links, verified 2026-09-24; Gemini / Grok / DeepSeek copy-then-open), WhatsApp self-send (your number box &#8594; wa.me with everything pre-filled), and plain Copy. Portal note: log an ai_handoff_pick event per pick &#8212; tells us which assistants users actually use.</li>
       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
@@ -286,7 +287,8 @@
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
-       <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
+       <li>Header polish (2026-09-24, Kim): playing with the current CSS against the real yellow-tower.com contact page — H1 up to 34px/800, section headers now nice and big (21px/800, no more tiny uppercase grey), masked number hero-sized at 28px like the real site's big phone header, roomier contact box. Boxes kept as they were.</li>
+      <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
       <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
       <li>For-your-AI dedup + smart send (2026-09-24, Kim): the big visible handoff blurb is gone &#8212; the brief now lives in a hidden element and never shows on the page. One "For your AI" card opens the sheet: pick-your-AI grid (ChatGPT / Claude / Perplexity open with pre-filled ?q= links, verified 2026-09-24; Gemini / Grok / DeepSeek copy-then-open), WhatsApp self-send (your number box &#8594; wa.me with everything pre-filled), and plain Copy. Portal note: log an ai_handoff_pick event per pick &#8212; tells us which assistants users actually use.</li>
       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
@@ -325,7 +327,8 @@
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
-       <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
+       <li>Header polish (2026-09-24, Kim): playing with the current CSS against the real yellow-tower.com contact page — H1 up to 34px/800, section headers now nice and big (21px/800, no more tiny uppercase grey), masked number hero-sized at 28px like the real site's big phone header, roomier contact box. Boxes kept as they were.</li>
+      <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
       <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
       <li>For-your-AI dedup + smart send (2026-09-24, Kim): the big visible handoff blurb is gone &#8212; the brief now lives in a hidden element and never shows on the page. One "For your AI" card opens the sheet: pick-your-AI grid (ChatGPT / Claude / Perplexity open with pre-filled ?q= links, verified 2026-09-24; Gemini / Grok / DeepSeek copy-then-open), WhatsApp self-send (your number box &#8594; wa.me with everything pre-filled), and plain Copy. Portal note: log an ai_handoff_pick event per pick &#8212; tells us which assistants users actually use.</li>
       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
