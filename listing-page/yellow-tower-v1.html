@@ -119,6 +119,13 @@
 .wa-row{display:flex;gap:8px;margin-top:10px}
 .wa-row input{flex:1;border:1px solid #e2e8f0;border-radius:9px;padding:11px 12px;font-size:15px;min-width:0}
 .wa-row input.err{border-color:#ef4444}
+
+.who{margin:14px 0 4px}
+.who-t{font-weight:800;font-size:15px;margin-bottom:8px}
+.who-t span{font-weight:400;color:#94a3b8;font-size:12px}
+.who-opt{display:flex;gap:10px;align-items:center;border:1px solid #e2e8f0;border-radius:10px;padding:11px 12px;margin-bottom:8px;font-size:15px;cursor:pointer;background:#fff}
+.who-opt input{width:18px;height:18px;accent-color:#22c55e;flex:none}
+.who-opt:has(input:checked){border-color:#22c55e;background:#f0fdf4}
 </style>
 </head>
 <body>
@@ -144,14 +151,19 @@
     <div class="masked">📞 +855 •• ••• •••</div>
     <div class="btnrow">
       <button class="btn btn-green" data-go="gate">Show contact info →</button>
-<div class="aicard">
-    <div style="font-weight:800;font-size:16px">For your AI</div>
     </div>
     <div class="btnrow" style="margin-top:8px">
       <a class="btn btn-ghost" href="https://yellow-tower.com" target="_blank" rel="noopener">🌐 Website</a>
       <span class="btn btn-ghost" style="cursor:default">✉️ i•••@yellow-tower.com</span>
     </div>
     <div class="trustline"><span class="ok">✓</span> Verified 2026-09-23 · Locked numbers stay real — no scrapers, no spam, no robocalls.</div>
+  </div>
+
+  <div class="aicard">
+    <div style="font-weight:800;font-size:16px">For your AI</div>
+    <div class="ai-names">ChatGPT · Gemini · Grok · Claude · Muse…</div>
+    <div style="font-size:14px;color:#475569;margin-bottom:10px">Hand Yellow Tower's verified record to your assistant — it books the viewing for you.</div>
+    <button class="btn btn-ghost" data-sheet style="width:100%">Send to my AI →</button>
   </div>
 
   <!-- block 5 · location -->
@@ -235,7 +247,8 @@
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
-       <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
+       <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
+      <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
       <li>For-your-AI dedup + smart send (2026-09-24, Kim): the big visible handoff blurb is gone &#8212; the brief now lives in a hidden element and never shows on the page. One "For your AI" card opens the sheet: pick-your-AI grid (ChatGPT / Claude / Perplexity open with pre-filled ?q= links, verified 2026-09-24; Gemini / Grok / DeepSeek copy-then-open), WhatsApp self-send (your number box &#8594; wa.me with everything pre-filled), and plain Copy. Portal note: log an ai_handoff_pick event per pick &#8212; tells us which assistants users actually use.</li>
       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
     </ul>
@@ -247,17 +260,19 @@
   <a class="backlink" data-go="s1">← Yellow Tower</a>
   <div class="mini-head">Office Space Rental · Chroy Changvar</div>
   <div class="lock-hero">Yellow Tower's contact details are behind a quick human check 🔒</div>
-  <div class="gate">Quick check you're human 🙂<br>Locked numbers stay real — no scrapers, no spam, no robocalls.</div>
-
+  <div class="who">
+    <div class="who-t">Who are you? <span>Pick one to unlock</span></div>
+    <label class="who-opt"><input type="radio" name="who" value="customer"><span>🔍 I'm looking for office space</span></label>
+    <label class="who-opt"><input type="radio" name="who" value="owner"><span>🏢 I own this business</span></label>
+    <label class="who-opt"><input type="radio" name="who" value="supplier"><span>📦 I'm a supplier</span></label>
+    <label class="who-opt"><input type="radio" name="who" value="job"><span>💼 I want to apply for a job</span></label>
+  </div>
   <div class="robot"><input type="checkbox" id="robot"><label for="robot">I'm not a robot</label></div>
   <button class="btn btn-green" id="unlock" data-go="s3" disabled style="width:100%;opacity:.45;margin-bottom:14px">SHOW CONTACT INFO</button>
-
-  
-      <div class="ai-names">ChatGPT · Gemini · Grok · Claude · Muse…</div>
-    <div style="font-size:14px;color:#475569;margin-bottom:10px">Hand Yellow Tower's verified record to your assistant — it books the viewing for you.</div>
-    <button class="btn btn-ghost" data-sheet style="width:100%">Send to my AI →</button>
-  </div>
-  </section>
+  <div class="or"><span>or</span></div>
+  <a class="btn btn-wa" href="https://wa.me/newcustomers" target="_blank" rel="noopener" style="width:100%;display:block;box-sizing:border-box">💬 Talk to our agent on WhatsApp →</a>
+  <div class="fine" style="text-align:center;margin-top:8px">Our AI worker replies instantly — no unlock needed.</div>
+</section>
 
 <!-- grey internal footer · s2 -->
 <div class="vfoot">v1 proposal · not production · counts/photos illustrative
@@ -271,7 +286,8 @@
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
-       <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
+       <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
+      <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
       <li>For-your-AI dedup + smart send (2026-09-24, Kim): the big visible handoff blurb is gone &#8212; the brief now lives in a hidden element and never shows on the page. One "For your AI" card opens the sheet: pick-your-AI grid (ChatGPT / Claude / Perplexity open with pre-filled ?q= links, verified 2026-09-24; Gemini / Grok / DeepSeek copy-then-open), WhatsApp self-send (your number box &#8594; wa.me with everything pre-filled), and plain Copy. Portal note: log an ai_handoff_pick event per pick &#8212; tells us which assistants users actually use.</li>
       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
     </ul>
@@ -309,7 +325,8 @@
       <li>Data is real (yellow-tower.com + kh34363.contact.page, 2026-09-23); confirm counts, photos, hours illustrative.</li>
       <li>Breadcrumb added:
 <li>Sample chrome rule (Kim, 2026-09-23): top banner removed - sample info now tiny grey text at the very bottom only.</li> ← Office rental spaces in Phnom Penh — the vertical → listing → back loop is part of the competition.</li>
-       <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
+       <li>Lock screen rebuilt (2026-09-24, Kim): stripped to the essentials — "Who are you?" role picker (customer / owner / supplier / job seeker, must pick one to unlock) + "I'm not a robot" + button. Preview list and noise removed. @newcustomers promo added: "Talk to our agent on WhatsApp" (no unlock needed). Portal note: send the chosen role with the unlock event.</li>
+      <li>For-your-AI placement fix (2026-09-24, Kim): the card moved OFF the lock screen onto the listing detail page (top, after the first CTA) — the lock screen is now just the human check: headline, "I'm not a robot", button. Preview list + illustrative fine print removed from the gate; it was burying the checkbox.</li>
       <li>For-your-AI dedup + smart send (2026-09-24, Kim): the big visible handoff blurb is gone &#8212; the brief now lives in a hidden element and never shows on the page. One "For your AI" card opens the sheet: pick-your-AI grid (ChatGPT / Claude / Perplexity open with pre-filled ?q= links, verified 2026-09-24; Gemini / Grok / DeepSeek copy-then-open), WhatsApp self-send (your number box &#8594; wa.me with everything pre-filled), and plain Copy. Portal note: log an ai_handoff_pick event per pick &#8212; tells us which assistants users actually use.</li>
       <li>Click-path correction (2026-09-24, Kim): the vertical card’s contact CTA now lands directly on the lock screen (#gate); the lock screen carries id=“gate” with a :target highlight, and the ‹ Yellow Tower breadcrumb returns to the listing detail.</li>
     </ul>
@@ -404,9 +421,15 @@ document.getElementById('wa-send').addEventListener('click',e=>{
   window.open('https://wa.me/'+digits+'?text='+encodeURIComponent(msg),'_blank','noopener');
   const b=e.target;b.textContent='Sent \u2713';setTimeout(()=>b.textContent='Send \u2192',1800);
 });
-// robot gate
+// gate: pick a role + prove you're human to unlock
+// PORTAL: send the chosen role with the unlock event — tells us who wants the numbers.
 const robot=document.getElementById('robot'),unlock=document.getElementById('unlock');
-robot.addEventListener('change',()=>{unlock.disabled=!robot.checked;unlock.style.opacity=robot.checked?'1':'.45';});
+function gateReady(){
+  const ok=document.querySelector('input[name="who"]:checked')&&robot.checked;
+  unlock.disabled=!ok;unlock.style.opacity=ok?'1':'.45';
+}
+robot.addEventListener('change',gateReady);
+document.querySelectorAll('input[name="who"]').forEach(r=>r.addEventListener('change',gateReady));
 </script>
 <p class="sample-note">Proposal mockup — not production. Facts from yellow-tower.com (2026-09-23).</p>
 </body>
